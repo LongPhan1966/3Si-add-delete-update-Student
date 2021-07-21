@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body onload="renderList()">
+    
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <h2 style="margin: 30px 0px;">Danh sách sinh viên</h2>
+        </div>
+        <div style="margin-top: 20px;" class="row">
+            <div class="col-md-5 col-12">
+                <div class="form-group">
+                    <label for="">ID</label>
+                    <input type="text" class="form-control id-Input" id="idInput">
+                    <span style="color: red; font-size: 11px;" id="id-warning"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Tên sinh viên</label>
+                    <input type="text" class="form-control name-Input" id="nameInput">
+                    <span style="color: red; font-size: 11px;" id="name-warning"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Số điện thoại</label>
+                    <input type="text" class="form-control phone-Input" id="phoneInput">
+                    <span style="color: red; font-size: 11px;" id="phone-warning"></span>
+                </div>
+                <button type="button" class="btn btn-success btn-add" onclick="save()" >
+                    Thêm 
+                </button>
+            </div>
+            <div class="col-md-7 col-12 d-flex justify-content-center">
+                <img class="img-regitration" style="height: 280px;" src="./img/undraw_chore_list_re_2lq8.svg" alt="">
+            </div>
+        </div>
+
+
+        <div style="margin-top: 20px;" class="body table-responsive">
+            <table id="dataTable" class="table table-hover ">
+            </table>
+        </div>
+    </div>
+
+
+    <script src="./js/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
